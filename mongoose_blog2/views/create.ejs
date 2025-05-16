@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Créer un article</title>
+    <link href="/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="/">Retour au blog</a>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('/assets/img/contact-bg.jpg')">
+      <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="page-heading">
+              <h1>Nouveau Post</h1>
+              <span class="subheading">Remplis le formulaire pour publier</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Formulaire -->
+    <main class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <form action="/new" method="POST" enctype="multipart/form-data">
+            <div class="form-floating">
+              <input class="form-control" type="text" name="titre" id="titre" placeholder="Titre" required />
+              <label for="titre">Titre</label>
+            </div>
+            <div class="form-floating">
+              <input class="form-control" type="text" name="auteur" id="auteur" placeholder="Auteur" required />
+              <label for="auteur">Auteur</label>
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" name="description" id="description" placeholder="Contenu" style="height: 12rem" required></textarea>
+              <label for="description">Contenu</label>
+            </div>
+            <div class="form-floating">
+              <input class="form-control" type="file" name="image" accept="image/*" />
+              <label for="image">Image</label>
+            </div>
+            <br />
+            <button class="btn btn-primary text-uppercase" type="submit">Publier</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="border-top mt-5">
+        <div class="container px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <ul class="list-inline text-center">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <div class="small text-center text-muted fst-italic">Copyright &copy; Mon Blog 2025</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>

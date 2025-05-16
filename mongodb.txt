@@ -1,0 +1,93 @@
+
+Mardi
+
+1.db.collection.find({
+  $and: [
+    {
+      quantite: {
+        $gt: 0
+      }
+    },
+    {
+      prix: {
+        $gt: 10,
+        $lt: 25
+      }
+    }
+  ]
+})
+
+2.db.collection.find({
+  couleurs: { $in: ["rouge", "bleue", "verte"] }
+})
+
+3.db.collection.find({
+  $and: [
+    {
+      tags: "bio"
+    },
+    {
+      en_stock: {
+        $ne: false
+      }
+    }
+  ]
+})
+
+4.db.collection.find({
+  description: {
+    $regex: "savoureux",
+    $options: "i"
+  }
+})
+
+// Travail fin du travail rendu //
+
+5.db.collection.find({
+  couleurs: {
+    $elemMatch: {
+      $in: [
+        "rouge",
+        "verte"
+      ]
+    }
+  },
+  quantite: {
+    $gt: 0
+  }
+})
+
+6.db.collection.find({
+  $or: [
+    {
+      tags: "alimentaire"
+    },
+    {
+      couleurs: "bleue"
+    }
+  ]
+})
+
+7.db.collection.find({},
+{
+  couleurs: {
+    $slice: 2
+  }
+})
+
+8.db.collection.find({
+  tags: {
+    $all: [
+      "alimentaire",
+      "sain"
+    ]
+  }
+})
+
+9.db.collection.find({
+  couleurs: {
+    $nin: [
+      "jaune"
+    ]
+  }
+})

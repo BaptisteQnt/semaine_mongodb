@@ -1,0 +1,30 @@
+Idée 1:
+
+Un forum qui aurait des post avec differents éléments attendu 
+- auteur, discussion, image, jeu, sujet, categorie
+
+mais qui ne pourrais jamais avoir les même éléments de définie
+pas d'image dans l'un, pas de jeu dans l'autre, ni jeu, ni image, pas de sujet. 
+
+Idée2: 
+
+Un wiki axé sur les vehicule militaire, trois axe avion, bateau, mbt/lt/td
+
+chaque categorie de aura ces propres caratéristique , altitude que pour les avion, tropille que bateau, roue/chenille pour vehicule. donc pas de bdd rigide. 
+
+ACID 
+la methode acid semble etre inapropriér, les avantage de la methode et la solidite semble etre inaproprié et overshoot pour un wiki
+
+BASE 
+la methode ici semble donc etre la meilleur et la plus optimiser. Réponse rapide, consultation de base et autre. 
+
+Théoreme de CAP
+
+Partition Tolerant (P) : il continue à fonctionner même si certains serveurs ne se répondent plus entre eux. OUI
+
+Available (A) : il répond quand même aux requêtes des utilisateurs. OUI 
+
+Consistency (C) : Les données ne sont pas immédiatement synchronisées partout NON VITALE
+
+
+
